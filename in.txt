@@ -1,0 +1,6 @@
+-inputNetlist /home/sness/dev/htgaa/cello/input/and.v
+-userConstraintsFile /home/sness/dev/htgaa/cello/input/Eco1C1G1T1.UCF.json
+-inputSensorFile /home/sness/dev/htgaa/cello/input/Eco1C1G1T1.input.json
+-outputDeviceFile /home/sness/dev/htgaa/cello/input/Eco1C1G1T1.output.json
+-pythonEnv python
+-outputDir /home/sness/dev/htgaa/cello/output

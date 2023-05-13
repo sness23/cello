@@ -1,0 +1,9 @@
+# Benchmark "blif_file" written by ABC on Wed Mar 22 15:58:21 2023
+INPUT(d)
+INPUT(e)
+OUTPUT(q1)
+OUTPUT(q0)
+n4          = vdd
+q1          = NOT(n4)
+n6          = NOT(d)
+q0          = AND(n6, e)

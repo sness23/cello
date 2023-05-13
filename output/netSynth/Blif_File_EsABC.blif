@@ -1,0 +1,9 @@
+.model blif_file
+.inputs d e
+.outputs q1 q0
+.names q1
+.names d e q0
+00 1
+10 1
+11 1
+.end

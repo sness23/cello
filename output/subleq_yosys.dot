@@ -1,0 +1,34 @@
+digraph "and_gate" {
+label="and_gate";
+rankdir="LR";
+remincross=true;
+n7 [ shape=octagon, label="d", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="e", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="q0", color="black", fontcolor="black" ];
+n10 [ shape=octagon, label="q1", color="black", fontcolor="black" ];
+c13 [ shape=record, label="{{<p11> A}|$61\n$_NOT_|{<p12> Y}}" ];
+c14 [ shape=record, label="{{<p11> A}|$62\n$_NOT_|{<p12> Y}}" ];
+c16 [ shape=record, label="{{<p11> A|<p15> B}|$64\n$_NOR_|{<p12> Y}}" ];
+c17 [ shape=record, label="{{<p11> A}|$65\n$_NOT_|{<p12> Y}}" ];
+c18 [ shape=record, label="{{<p11> A|<p15> B}|$66\n$_NOR_|{<p12> Y}}" ];
+c19 [ shape=record, label="{{<p11> A}|$67\n$_NOT_|{<p12> Y}}" ];
+c20 [ shape=record, label="{{<p11> A|<p15> B}|$68\n$_NOR_|{<p12> Y}}" ];
+c21 [ shape=record, label="{{<p11> A}|$69\n$_NOT_|{<p12> Y}}" ];
+c18:p12:e -> c19:p11:w [color="black", label=""];
+c21:p12:e -> n10:w [color="black", label=""];
+c19:p12:e -> c20:p15:w [color="black", label=""];
+c20:p12:e -> c21:p11:w [color="black", label=""];
+c13:p12:e -> c18:p11:w [color="black", label=""];
+n5 [ shape=point ];
+c14:p12:e -> n5:w [color="black", label=""];
+n5:e -> c16:p15:w [color="black", label=""];
+n5:e -> c18:p15:w [color="black", label=""];
+n6 [ shape=point ];
+c16:p12:e -> n6:w [color="black", label=""];
+n6:e -> c17:p11:w [color="black", label=""];
+n6:e -> c20:p11:w [color="black", label=""];
+n7:e -> c13:p11:w [color="black", label=""];
+n7:e -> c16:p11:w [color="black", label=""];
+n8:e -> c14:p11:w [color="black", label=""];
+c17:p12:e -> n9:w [color="black", label=""];
+}
