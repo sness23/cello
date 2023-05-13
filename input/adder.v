@@ -1,25 +1,28 @@
 /* 
 Full Adder Module for bit Addition
 */
-module fulladder
+module adder
 (
-	x,
-	y,
-	cin,
-
-	A, 
-	cout
+    addr_a,
+    addr_b,
+    zero,
+    one,
+    clock,
+    y,
+	z
  );
-// Width
-parameter WIDTH = 1;  
 
-input [WIDTH-1:0] x;
-input [WIDTH-1:0] y;
-input cin;
+   input addr_a;
+   input addr_b;
+   input zero;
+   input one;
+   input clock;
 
-output cout;
-output [WIDTH-1:0] A;
+   output y;
+   output z;
 
-assign {cout,A} =  cin + y + x;
- 
+   assign y = tmp;
+   assign z = addr_a || addr_b;
+
+
 endmodule
