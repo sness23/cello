@@ -1,15 +1,28 @@
-/*
- And gate
-*/
-module and_gate
+module adder
 (
- d,
- e,
- q0,
- q1,
+    addr_a,
+    addr_b,
+    zero,
+    one,
+    clock,
+    a,
+    b,
+    y,
+	z,
+    d,
+    e,
+    q0,
+    q1,
+
  );
 
-   input d;
+   input addr_a;
+   input addr_b;
+   input zero;
+   input one;
+   input clock;
+
+      input d;
    input e;
 
    wire  not0;
@@ -22,6 +35,18 @@ module and_gate
 
    output q0;
    output q1;
+
+   output y;
+   output z;
+
+   a = (!addr_a && zero) | (addr_a && one);
+   b = (!addr_b && zero) | (addr_b && one);
+
+   borrow = !(a && b) && a;
+   b_prime = !(a && b) && b;
+
+   assign y = a;
+   assign z = b;
 
    assign not0 = !d;
    assign and0 = e && not0;
@@ -36,4 +61,4 @@ module and_gate
    assign q0 = not1;
    assign q1 = not2;
 
-endmodule // and_gate
+endmodule
